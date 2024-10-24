@@ -1,7 +1,6 @@
 import { Request } from 'express';
 
-// Define the User interface
-interface User {
+export interface User {
     id: number;
     firstName: string;
     lastName: string;
@@ -9,10 +8,6 @@ interface User {
     email: string;
 }
 
-// Extend the Express Request interface to include users
-interface UserRequest extends Request {
-    users?: User[];  // Array of users, if available
-    user?: User;     // A single user, if needed
+export interface UserRequest extends Request {
+    users?: User[];
 }
-
-export { User, UserRequest };
